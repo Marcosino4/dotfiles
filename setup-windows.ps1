@@ -30,19 +30,6 @@ function Make-Symlink($target, $link) {
   Write-Host "Created symlink at: $target."
 }
 
-if (Get-Command code -ErrorAction SilentlyContinue) {
-  $extensions = Get-Content "$PSScriptRoot.\vscode\extensions.windows"
-  $question = "Do you want to install the Visual Studio Code extensions listed below?`n$([System.String]::Join("`n", $extensions))"
-
-  if (Confirm "[Visual Studio Code] -", $question) {
-    $extensions | ForEach-Object { code --install-extension $_ --force }
-  } else {
-    Write-Host "Skipping."
-  }
-} else {
-  Write-Host "Visual Studio Code is not installed or command 'code' is not in PATH. Skipping."
-}
-
 Make-Symlink "$($env:APPDATA)\Code\User\settings.json" "$($PSScriptRoot).\vscode\settings.json"
 
 Make-Symlink "$($env:APPDATA)\Code\User\keybindings.json" "$($PSScriptRoot).\vscode\keybindings.json"
