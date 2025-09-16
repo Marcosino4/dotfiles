@@ -1,6 +1,7 @@
 [user]
   signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFAIkApEPpbX4VL9UxhLYIAvWrNn37u0jKS6HQYVPbzc
-
+  name = Marcosino4
+  email = morenolpz.marcos@gmail.com
 [gpg]
   format = ssh
 
