@@ -1,0 +1,11 @@
+[user]
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFAIkApEPpbX4VL9UxhLYIAvWrNn37u0jKS6HQYVPbzc
+
+[gpg]
+  format = ssh
+
+[gpg "ssh"]
+  program = "/mnt/c/Users/Marcos/AppData/Local/Microsoft/WindowsApps/op-ssh-sign-wsl.exe"
+
+[commit]
+  gpgsign = true
